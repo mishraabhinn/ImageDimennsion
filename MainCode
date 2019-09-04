@@ -1,0 +1,18 @@
+#importing required libraries
+import numpy as np
+from skimage.io import imread, imshow
+from skimage.transform import resize
+from skimage.feature import hog
+from skimage import exposure
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+#reading the image
+img = imread('/Users/abhinnmishra/Downloads/DeepLearning/dog.png')
+imshow(img)
+#print(img.shape)
+print(np.shape(img))
+#np.reshape(img,(128,64,4))
+fd, hog_image = hog(resized_img, orientations=9, pixels_per_cell=(8, 8), 
+                    cells_per_block=(2, 2), visualize=True, multichannel=True)
